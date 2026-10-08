@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Cafe</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a id="logo" href="#home">
+                🎮 Gaming Cafe
+            </a>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#membership">Membership</a>
+            <a href="#tournament">Tournament</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Level Up Your Gaming Experience</h1>
+            <p>
+                Enjoy high-end gaming PCs, PlayStation 5, Xbox Series X,
+                ultra-fast fiber internet, premium refreshments, and exciting competitive tournaments.
+            </p>
+            <a href="more-games.html">
+                <button>Explore Games</button>
+            </a>
+            <a href="#membership">
+                <button>Join Now</button>
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800" alt="Premium Gaming Lounge Setup">
+        </div>
+    </section>
+
+    <!-- Games Section with JS Filter & Search -->
+    <section class="games" id="games">
+        <h2>Popular Games</h2>
+
+        <!-- Interactive JS Search & Filters -->
+        <div class="filter-controls">
+            <input type="text" id="game-search" placeholder="🔍 Search games by name/genre...">
+            <button class="filter-btn active-filter" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="shooter">Shooter / FPS</button>
+            <button class="filter-btn" data-filter="battle royale">Battle Royale</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+        </div>
+
+        <div class="game-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=500" alt="Valorant">
+                <h3>Valorant</h3>
+                <p>Genre : FPS Shooter</p>
+                <p>Price : ₹120 / Hour</p>
+                <a href="https://playvalorant.com/" target="_blank"><button>Play Now</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg" alt="PUBG">
+                <h3>PUBG</h3>
+                <p>Genre : Battle Royale</p>
+                <p>Price : ₹100 / Hour</p>
+                <a href="https://pubg.com/" target="_blank"><button>Play Now</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg" alt="GTA V">
+                <h3>GTA V</h3>
+                <p>Genre : Action Adventure</p>
+                <p>Price : ₹150 / Hour</p>
+                <a href="https://www.rockstargames.com/gta-v" target="_blank"><button>Play Now</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2669320/header.jpg" alt="EA Sports FC 25">
+                <h3>EA Sports FC 25</h3>
+                <p>Genre : Sports Football</p>
+                <p>Price : ₹120 / Hour</p>
+                <a href="https://store.steampowered.com/app/2669320/EA_SPORTS_FC_25/" target="_blank"><button>Play Now</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=500" alt="Minecraft">
+                <h3>Minecraft</h3>
+                <p>Genre : Sandbox Adventure</p>
+                <p>Price : ₹90 / Hour</p>
+                <a href="https://www.minecraft.net/" target="_blank"><button>Play Now</button></a>
+            </div>
+
+            <div class="card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg" alt="Call of Duty">
+                <h3>Call of Duty</h3>
+                <p>Genre : Action FPS Shooter</p>
+                <p>Price : ₹130 / Hour</p>
+                <a href="https://www.callofduty.com/" target="_blank"><button>Play Now</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <h2>⚡ Gaming Cost Calculator</h2>
+        <p style="color: #aaa;">Estimate your session price instantly before visiting!</p>
+
+        <div class="calculator-card">
+            <div class="calc-group">
+                <label for="calc-hours">Hours to Play:</label>
+                <input type="number" id="calc-hours" min="1" max="24" value="2">
+            </div>
+
+            <div class="calc-group">
+                <label for="calc-platform">Select Gaming Station:</label>
+                <select id="calc-platform">
+                    <option value="120">High-End Gaming PC (₹120/hr)</option>
+                    <option value="150">PlayStation 5 Console (₹150/hr)</option>
+                    <option value="140">Xbox Series X (₹140/hr)</option>
+                    <option value="250">Private VIP Streaming Lounge (₹250/hr)</option>
+                </select>
+            </div>
+
+            <div class="calc-group">
+                <label>
+                    <input type="checkbox" id="calc-snacks"> Include Unlimited Snacks & Cold Drink Combo (+₹150)
+                </label>
+            </div>
+
+            <div class="calc-result">
+                <h3>Estimated Total Price:</h3>
+                <h1 id="calc-total">₹240</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership" id="membership">
+        <h2>Membership Plans</h2>
+        <div class="member-box">
+            <div class="plan">
+                <h3>Basic</h3>
+                <h1>₹499</h1>
+                <p>20 Gaming Hours</p>
+                <p>Free High-Speed Wi-Fi</p>
+                <p>1 Free Soft Drink</p>
+                <a href="basic.html" target="_blank"><button>Join</button></a>
+            </div>
+
+            <div class="plan">
+                <h3>Premium</h3>
+                <h1>₹999</h1>
+                <p>50 Gaming Hours</p>
+                <p>Unlimited Soft Drinks</p>
+                <p>Free Tournament Entries</p>
+                <a href="premium.html" target="_blank"><button>Join</button></a>
+            </div>
+
+            <div class="plan">
+                <h3>VIP</h3>
+                <h1>₹1499</h1>
+                <p>Unlimited Monthly Hours</p>
+                <p>Private VIP Room Gaming</p>
+                <p>Free Premium Snacks & Drinks</p>
+                <a href="vip.html" target="_blank"><button>Join</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Section (With Live JS Countdowns) -->
+    <section class="tournament" id="tournament">
+        <h2>Upcoming Tournaments</h2>
+        <div class="tournament-container">
+            <div class="t-card">
+                <h3>Valorant Championship</h3>
+                <p>Prize Pool : ₹20,000</p>
+                <div class="countdown-badge" id="timer-valorant">Loading timer...</div>
+                <br>
+                <a href="register.html"><button>Register</button></a>
+            </div>
+
+            <div class="t-card">
+                <h3>BGMI Battle</h3>
+                <p>Prize Pool : ₹15,000</p>
+                <div class="countdown-badge" id="timer-bgmi">Loading timer...</div>
+                <br>
+                <a href="register-2.html"><button>Register</button></a>
+            </div>
+
+            <div class="t-card">
+                <h3>FIFA 25 Cup</h3>
+                <p>Prize Pool : ₹10,000</p>
+                <div class="countdown-badge" id="timer-fifa">Loading timer...</div>
+                <br>
+                <a href="register-3.html"><button>Register</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Gaming Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1000" alt="Setup 1">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000" alt="Setup 2">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000" alt="Setup 3">
+            <img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?q=80&w=1000" alt="Setup 4">
+            <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1000" alt="Setup 5">
+            <img src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?q=80&w=1000" alt="Setup 6">
+            <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1000" alt="Setup 7">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000" alt="Setup 8">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-box">
+            <form action="response.html" method="get">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="text" name="phone" placeholder="10-Digit Phone Number" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="info">
+                <h3>Visit Our Cafe</h3>
+                <p>📍 Chatta Bazar Rd, Nassir Complex, Hyderabad, Telangana</p>
+                <p>📞 +91 9876543210</p>
+                <p>✉ gamingcafe@gmail.com</p>
+                <p>🕒 Open Daily: 10 AM - 12 AM</p>
+
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.7344433495614!2d78.48953037390562!3d17.376506803120986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb983dccd80589%3A0x8618c7bd1a75db5a!2sAhmed's%20Institute%20of%20Excellence!5e0!3m2!1sen!2sin!4v1786947429147!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Gaming Cafe</h3>
+                <p>Your Ultimate Gaming Destination.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a><br>
+                <a href="#games">Games</a><br>
+                <a href="#membership">Membership</a><br>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a><br>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a><br>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">© 2026 Gaming Cafe. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Connected Here -->
+    <script src="main.js"></script>
+</body>
+</html>

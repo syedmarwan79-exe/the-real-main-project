@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1b1b1b;
+}
+
+#logo {
+    text-decoration: none;
+    color: #00e5ff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+}
+
+.register-box {
+    background: #1e1e1e;
+    width: 450px;
+    max-width: 90%;
+    padding: 40px;
+    margin: 60px auto;
+    border-radius: 10px;
+    border: 2px solid #00e5ff;
+    box-shadow: 0px 5px 25px rgba(0, 229, 255, 0.2);
+}
+
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00e5ff;
+}
+
+.register-box input, .register-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.register-box input:focus {
+    border-color: #00e5ff;
+}
+
+.register-box button {
+    width: 100%;
+    padding: 12px;
+    background: #00e5ff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.register-box button:hover {
+    background: white;
+    transform: scale(1.03);
+}
